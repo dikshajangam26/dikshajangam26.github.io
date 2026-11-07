@@ -174,9 +174,9 @@ const PROJECTS = [
       "Reached a multi-view AUROC of 0.94 on synthetic data.",
       "Counterfactual repair raised downstream mean IoU from 0.405 to 0.459."
     ],
-    note: "Honest scope: evaluated on synthetic data only.",
+    note: "Honest scope: evaluated on simple synthetic clips (a moving square on a dark background), so the scores show the method works in a controlled setting, not on real-world footage.",
     tags: ["DINOv2","PyTorch","Multi-view geometry","Calibration"],
-    repo:"", video:"", mp4:"", image:"", report:"", design:""
+    repo:"https://github.com/dikshajangam26/Physical-Inconsistency-Detector", video:"", mp4:"", image:"", report:"", design:""
   },
   {
     title: "Autonomous Grasp System",
@@ -187,7 +187,7 @@ const PROJECTS = [
       "Wrote 50+ pytest cases, run on every change through GitHub Actions CI and packaged in Docker."
     ],
     tags: ["Inverse kinematics","Visual servoing","CNN","pytest","Docker","CI"],
-    repo:"", video:"", mp4:"", image:"", report:"", design:""
+    repo:"https://github.com/dikshajangam26/grasp-system", video:"", mp4:"", image:"", report:"", design:""
   },
   {
     title: "ROS 2 Path Following System",
@@ -198,7 +198,7 @@ const PROJECTS = [
       "Added LiDAR obstacle avoidance, camera-based HSV worker detection (95% accuracy) and a live Streamlit dashboard."
     ],
     tags: ["Pure Pursuit","Trajectory generation","Profiling","Streamlit"],
-    repo:"", video:"", mp4:"", image:"", report:"", design:""
+    repo:"https://github.com/dikshajangam26/path_following_system", video:"", mp4:"", image:"", report:"", design:""
   },
   {
     title: "Autonomous Hazardous Zone Detection Using SLAM",
@@ -209,7 +209,7 @@ const PROJECTS = [
       "Odometry + IMU gyroscope fusion to correct heading drift on uneven terrain; sensor noise injected to test robustness."
     ],
     tags: ["SLAM","Occupancy grid","Sensor fusion","State machine"],
-    repo:"", video:"", mp4:"", image:"", report:"", design:""
+    repo:"https://github.com/dikshajangam26/Autonomous-Hazardous-Zone-Detection-SLAM", video:"https://github.com/dikshajangam26/Autonomous-Hazardous-Zone-Detection-SLAM#readme", mp4:"", image:"", report:"", design:""
   },
   {
     title: "CNN Lane-Following Controller",
@@ -231,7 +231,7 @@ const PROJECTS = [
       "Added exponential-backoff retries so API rate limits no longer crash a run."
     ],
     tags: ["LLM agents","LLM-as-judge","A*","Output validation"],
-    repo:"", video:"", mp4:"", image:"", report:"", design:""
+    repo:"https://github.com/dikshajangam26/llm-agent-virtual-world", video:"https://github.com/dikshajangam26/llm-agent-virtual-world/blob/main/Simulation_video.mp4", mp4:"", image:"", report:"https://github.com/dikshajangam26/llm-agent-virtual-world/blob/main/Full_Documentation.pdf", design:""
   },
   {
     title: "Autonomous Obstacle-Avoidance Vehicle",
@@ -240,6 +240,14 @@ const PROJECTS = [
     points: [],
     tags: ["Arduino","ESP32","Embedded C/C++"],
     repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "Touchless Hand-Tracking Mouse",
+    meta: "Python, OpenCV, MediaPipe",
+    summary: "An offline computer-vision app that turns a webcam into a touchless mouse using OpenCV and MediaPipe hand tracking.",
+    points: [],
+    tags: ["OpenCV","MediaPipe","Computer vision"],
+    repo:"https://github.com/dikshajangam26/Hand_tracking_mouse", video:"", mp4:"", image:"", report:"", design:""
   },
   {
     title: "3D Scene Reconstruction from Video",
