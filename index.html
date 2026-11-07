@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diksha Jangam – Robotics Engineer Portfolio</title>
+<meta name="description" content="Portfolio of Diksha Jangam, MSc Robotics (University of Birmingham): SLAM, perception, manipulation and robot control, with code, results and documentation.">
+<style>
+:root{
+  --bg:#fafaf7; --surface:#ffffff; --text:#1c1f24; --muted:#5c6470; --line:#e3e2dc;
+  --accent:#0b5fa5; --accent-soft:#e6f0f9; --chip:#f0efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#14171b; --surface:#1c2025; --text:#e9ebee; --muted:#9aa3ae; --line:#2c323a;
+         --accent:#6db3ee; --accent-soft:#1a2b3b; --chip:#262b32; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;height:52px}
+header.top strong{font-size:15px}
+nav a{margin-left:16px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--accent);text-decoration:none}
+.hero{padding:56px 0 32px}
+.hero h1{font-size:clamp(30px,6vw,46px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+.hero p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--muted);max-width:680px;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text);font-size:14px;font-weight:600}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{text-decoration:none;filter:brightness(.96)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:34px 0 8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font-size:24px;letter-spacing:-.01em}
+.stat span{font-size:13px;color:var(--muted)}
+section{padding:36px 0}
+section h2{font-size:24px;margin:0 0 6px;letter-spacing:-.01em}
+section .sub{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 4px;font-size:20px}
+.meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+.card p{margin:0 0 10px}
+.card ul{margin:6px 0 12px;padding-left:20px}
+.card li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.chip{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12.5px;color:var(--muted)}
+.note{background:var(--accent-soft);border-radius:8px;padding:9px 12px;font-size:14px;margin:10px 0}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.links a{font-size:13.5px;font-weight:600;border:1px solid var(--line);border-radius:7px;padding:5px 11px;background:var(--bg)}
+.links a:hover{text-decoration:none;border-color:var(--accent)}
+.media{margin:12px 0}
+.media video,.media img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.skills .card{padding:18px}
+.skills h3{font-size:16px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14px}
+@media (max-width:560px){header.top strong{white-space:nowrap;font-size:14px}nav a{margin-left:8px;font-size:13px}.card{padding:18px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <strong>Diksha Jangam</strong>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="hero">
+  <h1>Robotics engineer building perception, SLAM and manipulation systems</h1>
+  <p class="lead">MSc Robotics (University of Birmingham, Merit) with a BSc in Data Science and Analytics. I build robot systems end to end, test them against measurable targets, and check where their own metrics mislead.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">See my work</a>
+    <a class="btn" href="https://github.com/dikshajangam26" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://linkedin.com/in/diksha-jangam" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="Diksha_Jangam_Robotics_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>10</b><span>ROS 2 packages in my MSc thesis system</span></div>
+    <div class="stat"><b>40+ Hz</b><span>control loop, under 30 ms cycle (from 15 FPS)</span></div>
+    <div class="stat"><b>50+</b><span>automated tests with CI and Docker</span></div>
+    <div class="stat"><b>0.94</b><span>multi-view AUROC, inconsistency detector</span></div>
+  </div>
+</div>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Each project lists what I built, the measured results, and where to check the code and documentation.</p>
+  <div class="grid" id="project-list"></div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">Listed only where I have used them in the projects above.</p>
+  <div class="skills">
+    <div class="card"><h3>Manipulation, planning &amp; control</h3><p>6-DoF inverse kinematics (ikpy), trajectory generation, A*, Pure Pursuit, ArUco visual servoing, finite state machines, odometry + IMU fusion.</p></div>
+    <div class="card"><h3>Perception &amp; 3D</h3><p>YOLOv8, ByteTrack, DINOv2 probing, OpenCV, depth back-projection, Open3D (ICP), COLMAP, LiDAR and camera integration, SLAM (ORB-SLAM3, slam_toolbox, custom).</p></div>
+    <div class="card"><h3>Robotics &amp; simulation</h3><p>ROS 2 Humble (nodes, launch, TF2, rosbag), Gazebo (camera, LiDAR, IMU plugins), Webots, NVIDIA Isaac Lab and Isaac Sim (setup), Arduino, ESP32.</p></div>
+    <div class="card"><h3>Software &amp; ML</h3><p>Python (primary), C/C++ (embedded), SQL, PyTorch, TensorFlow, Git, Docker, GitHub Actions, pytest, Linux/WSL.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    <p>I completed an MSc in Robotics at the University of Birmingham in 2026 (Merit), after a BSc in Data Science and Analytics at the University of Mumbai (CGPA 8.4/10, top 3 of 70 students).</p>
+    <p>Before robotics I worked on data: I built a tested Python pipeline with schema validation over 5000+ records that cut processing time by 22%, and designed a cloud data warehouse and ETL pipelines for 8 stakeholder use cases that cut decision latency by 4 hours.</p>
+    <p>Most of my robotics work so far is in simulation and on synthetic data, with one physical Arduino/ESP32 vehicle. I am looking to move to real platforms and to research that connects perception with action.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Birmingham, UK. <a href="mailto:dikshajangam05@gmail.com">dikshajangam05@gmail.com</a></p>
+    <div class="links">
+      <a href="https://github.com/dikshajangam26" target="_blank" rel="noopener">github.com/dikshajangam26</a>
+      <a href="https://linkedin.com/in/diksha-jangam" target="_blank" rel="noopener">linkedin.com/in/diksha-jangam</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Diksha Jangam</div>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------
+   HOW TO ADD YOUR PROOF OF WORK
+   For each project, fill in any of these fields and a button or media
+   block appears automatically. Leave a field as "" to hide it.
+     repo   : link to the GitHub repository
+     video  : link to a demo video page (YouTube, Drive, etc.)
+     mp4    : file name of a short demo video in this folder (e.g. "grasp-demo.mp4")
+     image  : file name of a screenshot or diagram in this folder (e.g. "thesis-map.png")
+     report : link to a PDF report (e.g. "thesis-report.pdf")
+     design : link to design files (CAD, schematics, URDF) if you have them
+------------------------------------------------------------------- */
+const PROJECTS = [
+  {
+    title: "Object-Based SLAM for Warehouse Automation",
+    meta: "MSc thesis · Apr–Aug 2026 · ROS 2, Gazebo, YOLOv8, ByteTrack, ORB-SLAM3, Open3D",
+    summary: "A ten-package ROS 2 system that turns camera detections into a 3D object map, where every detection is validated against an independent LiDAR ray-cast before it is accepted.",
+    points: [
+      "Ran for 3.98×10³ s of simulation and processed 3.69×10⁵ tracking events, reducing 1.44×10⁵ mapping records to a 28-landmark map.",
+      "Analysed 100 logged decisions: 78 accepted, 22 rejected, median latency 1.16 s.",
+      "Audited the system's own reporting and traced four misleading metrics to root causes, including a camera-intrinsics mismatch and ground-truth odometry masking a real trajectory error.",
+      "Found that 61 of 161 tracked identities lasted under 2 s, which the headline numbers hid."
+    ],
+    note: "Honest scope: this runs in simulation only. The audit is the main result, not a state-of-the-art claim.",
+    tags: ["ROS 2","Gazebo","YOLOv8","ByteTrack","LiDAR","SLAM"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "Physical Inconsistency Detector",
+    meta: "DINOv2, PyTorch, multi-view geometry, synthetic data",
+    summary: "A detector that flags physically inconsistent scenes using a calibrated DINOv2 residual probe plus multi-view and temporal-sync consistency checks.",
+    points: [
+      "Reached a multi-view AUROC of 0.94 on synthetic data.",
+      "Counterfactual repair raised downstream mean IoU from 0.405 to 0.459."
+    ],
+    note: "Honest scope: evaluated on synthetic data only.",
+    tags: ["DINOv2","PyTorch","Multi-view geometry","Calibration"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "Autonomous Grasp System",
+    meta: "Jun 2026 · ROS 2 Humble, PyTorch, OpenCV, ikpy, Docker, GitHub Actions",
+    summary: "An end-to-end manipulation pipeline: ArUco pose estimation and visual servoing, a CNN grasp-quality predictor and a 6-DoF inverse-kinematics planner, coordinated by a finite state machine.",
+    points: [
+      "Benchmarked every stage against a latency budget: vision under 33 ms, inference under 100 ms, IK under 50 ms.",
+      "Wrote 50+ pytest cases, run on every change through GitHub Actions CI and packaged in Docker."
+    ],
+    tags: ["Inverse kinematics","Visual servoing","CNN","pytest","Docker","CI"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "ROS 2 Path Following System",
+    meta: "Mar 2026 · ROS 2 Humble, Webots, Pioneer 3-DX, Streamlit",
+    summary: "A three-node navigation stack: path smoothing, trapezoidal-velocity trajectories and Pure Pursuit tracking for a differential-drive robot.",
+    points: [
+      "Runs at 40+ Hz with under 30 ms total cycle time; profiled and optimised the control loop from 15 to 40+ FPS (2.67×).",
+      "Added LiDAR obstacle avoidance, camera-based HSV worker detection (95% accuracy) and a live Streamlit dashboard."
+    ],
+    tags: ["Pure Pursuit","Trajectory generation","Profiling","Streamlit"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "Autonomous Hazardous Zone Detection Using SLAM",
+    meta: "Dec 2025 · Python, Webots, camera, LiDAR",
+    summary: "A SLAM engine written from scratch, with a hysteresis-based state machine that separates static obstacles from human workers.",
+    points: [
+      "Log-odds occupancy grid of 50 m × 50 m at 0.1 m resolution with Bresenham ray tracing.",
+      "Odometry + IMU gyroscope fusion to correct heading drift on uneven terrain; sensor noise injected to test robustness."
+    ],
+    tags: ["SLAM","Occupancy grid","Sensor fusion","State machine"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "CNN Lane-Following Controller",
+    meta: "Oct 2026 · PyTorch, ROS 2 Humble, Gazebo, OpenCV",
+    summary: "A CNN steering controller running closed-loop at 30 Hz in a Gazebo warehouse simulation with 3 human obstacles.",
+    points: [
+      "Added Gazebo camera, LiDAR and IMU plugins and a differential-drive controller.",
+      "Generated 500 synthetic training samples and retrained for 10 epochs (training loss 0.597 to 0.013)."
+    ],
+    tags: ["PyTorch","Gazebo","Closed-loop control","Synthetic data"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "LLM-Driven Navigation Agent",
+    meta: "May 2026 · Python, Webots, A*, LLM APIs",
+    summary: "An agent in which one LLM proposes 4 candidate routes from a natural-language instruction and a second LLM judges them, executed with A* on a 0.2 m inflated grid.",
+    points: [
+      "Removed coordinate hallucination by snapping model outputs to valid goals.",
+      "Added exponential-backoff retries so API rate limits no longer crash a run."
+    ],
+    tags: ["LLM agents","LLM-as-judge","A*","Output validation"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "Autonomous Obstacle-Avoidance Vehicle",
+    meta: "Arduino, ESP32, embedded C/C++",
+    summary: "A physical vehicle with real-time, sensor-driven obstacle-avoidance logic programmed in embedded C/C++.",
+    points: [],
+    tags: ["Arduino","ESP32","Embedded C/C++"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  },
+  {
+    title: "3D Scene Reconstruction from Video",
+    meta: "COLMAP, Open3D, Python",
+    summary: "3D scenes reconstructed from video with COLMAP structure-from-motion and Open3D point-cloud processing, working with camera poses and registration.",
+    points: [],
+    tags: ["COLMAP","Open3D","Point clouds"],
+    repo:"", video:"", mp4:"", image:"", report:"", design:""
+  }
+];
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+const list = document.getElementById("project-list");
+PROJECTS.forEach(p=>{
+  const links = [];
+  if(p.repo)   links.push(`<a href="${esc(p.repo)}" target="_blank" rel="noopener">Code repository</a>`);
+  if(p.video)  links.push(`<a href="${esc(p.video)}" target="_blank" rel="noopener">Demo video</a>`);
+  if(p.report) links.push(`<a href="${esc(p.report)}" target="_blank" rel="noopener">Report (PDF)</a>`);
+  if(p.design) links.push(`<a href="${esc(p.design)}" target="_blank" rel="noopener">Design files</a>`);
+  const media = p.mp4
+    ? `<div class="media"><video controls preload="metadata" src="${esc(p.mp4)}"></video></div>`
+    : (p.image ? `<div class="media"><img loading="lazy" src="${esc(p.image)}" alt="${esc(p.title)}"></div>` : "");
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML =
+    `<h3>${esc(p.title)}</h3>` +
+    `<div class="meta">${esc(p.meta)}</div>` +
+    `<p>${esc(p.summary)}</p>` +
+    (p.points.length ? `<ul>${p.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>` : "") +
+    (p.note ? `<div class="note">${esc(p.note)}</div>` : "") +
+    media +
+    `<div class="chips">${p.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>` +
+    (links.length ? `<div class="links">${links.join("")}</div>` : "");
+  list.appendChild(el);
+});
+</script>
+</body>
+</html>
